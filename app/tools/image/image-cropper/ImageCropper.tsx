@@ -42,11 +42,22 @@ export default function ImageCropperTool() {
   const [image, setImage] = useState<string | null>(null);
   const [crop, setCrop] = useState({ x: 0, y: 0 });
   const [zoom, setZoom] = useState(1);
+  const [cropSize, setCropSize] = useState<{ width: number; height: number } | null>(null);
   const [croppedAreaPixels, setCroppedAreaPixels] = useState<any>(null);
   const [result, setResult] = useState<string | null>(null);
 
   const onCropComplete = useCallback((_: any, pixels: any) => {
     setCroppedAreaPixels(pixels);
+  }, []);
+
+  const onMediaLoaded = useCallback((mediaSize: any) => {
+    // ✅ Select full image by default
+    setCrop({ x: 0, y: 0 });
+    setZoom(1);
+    setCropSize({
+      width: mediaSize.naturalWidth,
+      height: mediaSize.naturalHeight,
+    });
   }, []);
 
   const cropImage = async () => {
@@ -57,6 +68,7 @@ export default function ImageCropperTool() {
 
   return (
     <div className="space-y-8">
+      {/* UPLOAD */}
       <input
         type="file"
         accept="image/*"
@@ -66,25 +78,27 @@ export default function ImageCropperTool() {
         }
       />
 
+      {/* CROPPER */}
       {image && (
         <div className="relative w-full h-[400px] bg-black rounded-xl overflow-hidden">
           <Cropper
             image={image}
             crop={crop}
             zoom={zoom}
-            aspect={undefined} // free resize
+            cropSize={cropSize ?? undefined}
+            aspect={undefined} // free crop
             onCropChange={setCrop}
             onZoomChange={setZoom}
             onCropComplete={onCropComplete}
+            onMediaLoaded={onMediaLoaded}
           />
         </div>
       )}
 
+      {/* CONTROLS */}
       {image && (
         <div className="space-y-4">
-          <label className="text-sm font-medium">
-            Zoom
-          </label>
+          <label className="text-sm font-medium">Zoom</label>
           <input
             type="range"
             min={1}
@@ -105,6 +119,7 @@ export default function ImageCropperTool() {
         </div>
       )}
 
+      {/* RESULT */}
       {result && (
         <div className="flex flex-col items-center gap-4">
           <img src={result} className="max-h-64 border rounded-xl" />
