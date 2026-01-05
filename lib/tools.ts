@@ -5,11 +5,11 @@ export const categories = [
     description: "Format, validate and convert JSON data",
     icon: "🧩",
     tools: [
-      { title: "JSON Formatter", href: "/tools/json-formatter" },
-      { title: "JSON Validator", href: "/tools/json-validator" },
-      { title: "JSON Minifier", href: "/tools/json-minifier" },
-      { title: "JSON to CSV", href: "/tools/json-to-csv" },
-      { title: "JSON to XML", href: "/tools/json-to-xml" },
+      { title: "JSON Formatter", href: "/tools/json/json-formatter" },
+      { title: "JSON Validator", href: "/tools/json/json-validator" },
+      { title: "JSON Minifier", href: "/tools/json/json-minifier" },
+      { title: "JSON to CSV", href: "/tools/json/json-to-csv" },
+      { title: "JSON to XML", href: "/tools/json/json-to-xml" },
     ],
   },
   {
@@ -18,11 +18,11 @@ export const categories = [
     description: "Compress, resize and edit images",
     icon: "🖼️",
     tools: [
-      { title: "Image Compressor", href: "/tools/image-compressor" },
-      { title: "Image Resizer", href: "/tools/image-resizer" },
-      { title: "Image Converter", href: "/tools/image-converter" },
-      { title: "Image Cropper", href: "/tools/image-cropper" },
-      { title: "Image Watermark", href: "/tools/image-watermark" },
+      { title: "Image Compressor", href: "/tools/image/image-compressor" },
+      { title: "Image Resizer", href: "/tools/image/image-resizer" },
+      { title: "Image Converter", href: "/tools/image/image-converter" },
+      { title: "Image Cropper", href: "/tools/image/image-cropper" },
+      { title: "Image Watermark", href: "/tools/image/image-watermark" },
     ],
   },
   {
