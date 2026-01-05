@@ -31,11 +31,11 @@ export const categories = [
     description: "JWT, hashing and encoding utilities",
     icon: "🔐",
     tools: [
-      { title: "JWT Decoder", href: "/tools/jwt-decoder" },
-      { title: "Base64 Encode", href: "/tools/base64-encode" },
-      { title: "Base64 Decode", href: "/tools/base64-decode" },
-      { title: "Hash Generator", href: "/tools/hash-generator" },
-      { title: "UUID Generator", href: "/tools/uuid-generator" },
+      { title: "JWT Decoder", href: "/tools/security/jwt-decoder" },
+      { title: "Base64 Encode", href: "/tools/security/base64-encode" },
+      { title: "Base64 Decode", href: "/tools/security/base64-decode" },
+      { title: "Hash Generator", href: "/tools/security/hash-generator" },
+      { title: "UUID Generator", href: "/tools/security/uuid-generator" },
     ],
   },
 ];
