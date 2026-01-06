@@ -108,55 +108,59 @@
 // }
 import Link from "next/link";
 import { categories } from "@/lib/tools";
+import HomeWelcomeModal from "./components/HomeWelcomeModal";
 
 export default function HomePage() {
   return (
-    <div className="space-y-24">
-      {/* HERO */}
-      <section className="text-center max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-          Free Online Tools for Developers & Students
-        </h1>
-        <p className="text-gray-600 text-lg">
-          All essential utilities in one simple platform.
-        </p>
-      </section>
+    <>
+      <HomeWelcomeModal />
+      <div className="space-y-24">
+        {/* HERO */}
+        <section className="text-center max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+            Free Online Tools for Developers & Students
+          </h1>
+          <p className="text-gray-600 text-lg">
+            All essential utilities in one simple platform.
+          </p>
+        </section>
 
-      {/* CATEGORIES */}
-      <section className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {categories.map((cat) => (
-          <div
-            key={cat.slug}
-            className="bg-white border rounded-3xl p-6 hover:shadow-lg transition"
-          >
-            <div className="text-3xl mb-3">{cat.icon}</div>
-            <h2 className="text-xl font-bold mb-2">{cat.title}</h2>
-            <p className="text-sm text-gray-600 mb-4">
-              {cat.description}
-            </p>
-
-            <ul className="space-y-2 text-sm">
-              {cat.tools.slice(0, 3).map((tool) => (
-                <li key={tool.href}>
-                  <Link
-                    href={tool.href}
-                    className="text-indigo-600 hover:underline"
-                  >
-                    {tool.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <Link
-              href={`/tools/${cat.slug}`}
-              className="inline-block mt-4 text-sm font-medium text-indigo-600 hover:underline"
+        {/* CATEGORIES */}
+        <section className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {categories.map((cat) => (
+            <div
+              key={cat.slug}
+              className="bg-white border rounded-3xl p-6 hover:shadow-lg transition"
             >
-              View all →
-            </Link>
-          </div>
-        ))}
-      </section>
-    </div>
+              <div className="text-3xl mb-3">{cat.icon}</div>
+              <h2 className="text-xl font-bold mb-2">{cat.title}</h2>
+              <p className="text-sm text-gray-600 mb-4">
+                {cat.description}
+              </p>
+
+              <ul className="space-y-2 text-sm">
+                {cat.tools.slice(0, 3).map((tool) => (
+                  <li key={tool.href}>
+                    <Link
+                      href={tool.href}
+                      className="text-indigo-600 hover:underline"
+                    >
+                      {tool.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              <Link
+                href={`/tools/${cat.slug}`}
+                className="inline-block mt-4 text-sm font-medium text-indigo-600 hover:underline"
+              >
+                View all →
+              </Link>
+            </div>
+          ))}
+        </section>
+      </div>
+    </>
   );
 }
