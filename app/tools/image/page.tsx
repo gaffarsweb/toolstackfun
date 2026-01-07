@@ -1,5 +1,32 @@
+import { Metadata } from "next";
 import Link from "next/link";
-
+export const metadata: Metadata = {
+  title:
+    "Image Tools – Compress, Resize, Convert & Edit Images Online | ToolStack.fun",
+  description:
+    "Free online image tools to compress, resize, convert, crop, and add watermarks to images. Fast, secure, and browser-based image editing tools for developers and students.",
+  keywords: [
+    "Image Compressor",
+    "Image Resizer",
+    "Image Converter",
+    "Image Cropper",
+    "Image Watermark",
+    "Online Image Tools",
+    "Free Image Editor",
+    "Developer Tools",
+  ],
+  alternates: {
+    canonical: "https://www.toolstack.fun/tools/image",
+  },
+  openGraph: {
+    title: "Free Online Image Tools | ToolStack.fun",
+    description:
+      "Compress, resize, convert, crop, and watermark images instantly using free browser-based tools.",
+    url: "https://www.toolstack.fun/tools/image",
+    siteName: "ToolStack.fun",
+    type: "website",
+  },
+};
 const imageTools = [
   {
     title: "Image Compressor",

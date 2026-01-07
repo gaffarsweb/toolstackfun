@@ -1,5 +1,31 @@
+import { Metadata } from "next";
 import Link from "next/link";
-
+export const metadata: Metadata = {
+  title: "JSON Tools – Formatter, Validator, Converter & More | ToolStack.fun",
+  description:
+    "Free online JSON tools including JSON Formatter, Validator, Minifier, JSON to XML, JSON to CSV, and JSON Diff Checker. Fast, secure, browser-based tools for developers and students.",
+  keywords: [
+    "JSON Formatter",
+    "JSON Validator",
+    "JSON Minifier",
+    "JSON to XML",
+    "JSON to CSV",
+    "JSON Diff",
+    "Online JSON Tools",
+    "Developer Tools",
+  ],
+  alternates: {
+    canonical: "https://www.toolstack.fun/tools/json",
+  },
+  openGraph: {
+    title: "Free Online JSON Tools | ToolStack.fun",
+    description:
+      "Format, validate, convert, and analyze JSON data instantly with free browser-based tools.",
+    url: "https://www.toolstack.fun/tools/json",
+    siteName: "ToolStack.fun",
+    type: "website",
+  },
+};
 const jsonTools = [
   {
     title: "JSON Formatter",

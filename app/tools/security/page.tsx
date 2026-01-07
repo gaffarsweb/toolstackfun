@@ -1,5 +1,33 @@
+import { Metadata } from "next";
 import Link from "next/link";
-
+export const metadata: Metadata = {
+  title:
+    "JWT Tools – Decode, Encode, Verify & Test JWT Tokens | ToolStack.fun",
+  description:
+    "Free online JWT tools to decode, encode, verify signatures, check expiry, and test JSON Web Tokens securely. Browser-based JWT utilities for developers and students.",
+  keywords: [
+    "JWT Decoder",
+    "JWT Encoder",
+    "JWT Verifier",
+    "JWT Expiry Checker",
+    "JWT Base64 Decoder",
+    "JWT Playground",
+    "JSON Web Token Tools",
+    "Security Tools",
+    "Developer Tools",
+  ],
+  alternates: {
+    canonical: "https://www.toolstack.fun/tools/security",
+  },
+  openGraph: {
+    title: "Free Online JWT Tools | ToolStack.fun",
+    description:
+      "Decode, generate, verify, and experiment with JWT tokens safely using free browser-based tools.",
+    url: "https://www.toolstack.fun/tools/security",
+    siteName: "ToolStack.fun",
+    type: "website",
+  },
+};
 const jwtTools = [
   {
     title: "JWT Decoder",
