@@ -1,3 +1,4 @@
+import AdUnit from "@/app/components/AdUnit";
 import { Metadata } from "next";
 import Link from "next/link";
 export const metadata: Metadata = {
@@ -115,7 +116,7 @@ export default function JsonToolsPage() {
           </Link>
         ))}
       </section>
-
+ <AdUnit slot="1994567890" />
       {/* ---------- INFO / TRUST ---------- */}
       <section className="bg-gray-50 border rounded-3xl p-10 text-center fade-up fade-delay-2">
         <h2 className="text-2xl font-bold mb-3">

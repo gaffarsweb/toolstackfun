@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { categories } from "@/lib/tools";
 import HomeWelcomeModal from "./components/HomeWelcomeModal";
+import AdUnit from "./components/AdUnit";
 
 export default function HomePage() {
   return (
@@ -82,6 +83,7 @@ export default function HomePage() {
           ))}
         </section>
 
+        <AdUnit slot="1234567890" />
         {/* TRUST */}
         <section className="text-center text-gray-600 text-sm fade-up">
           Trusted by students and developers building real-world projects.
