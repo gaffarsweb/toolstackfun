@@ -13,21 +13,30 @@ export const metadata: Metadata = {
   },
 
   description:
-    "ToolStack.fun offers free online developer tools like JSON Formatter, JWT Tools, Image Tools, Text Utilities and more. Built for students and developers.",
+    "ToolStack.fun provides free online tools for developers and students. Use JSON tools, JWT tools, image utilities, converters, validators, and more — fast, secure, and browser-based.",
 
   keywords: [
-    "online tools",
-    "developer tools",
-    "json tools",
-    "jwt tools",
-    "image tools",
+    "ToolStack",
+    "ToolStack.fun",
     "free online tools",
-    "toolstack",
+    "developer tools",
+    "student tools",
+    "json formatter",
+    "json validator",
+    "jwt decoder",
+    "jwt tools",
+    "image compressor",
+    "image converter",
+    "online utilities",
+    "web developer tools",
   ],
 
-  authors: [{ name: "ToolStack Team" }],
+  authors: [{ name: "ToolStack Team", url: "https://www.toolstack.fun" }],
   creator: "ToolStack.fun",
   publisher: "ToolStack.fun",
+
+  applicationName: "ToolStack.fun",
+  category: "Technology",
 
   robots: {
     index: true,
@@ -35,6 +44,17 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+
+  alternates: {
+    canonical: "https://www.toolstack.fun",
+    languages: {
+      "en": "https://www.toolstack.fun",
+      "en-IN": "https://www.toolstack.fun",
     },
   },
 
@@ -44,28 +64,32 @@ export const metadata: Metadata = {
     url: "https://www.toolstack.fun",
     title: "ToolStack.fun – Free Online Developer Tools",
     description:
-      "Free online tools for developers and students. JSON, JWT, Image, Text and more.",
+      "Free online tools for developers and students. JSON, JWT, Image tools and more. Fast, secure and browser-based utilities.",
+    locale: "en_US",
     images: [
       {
-        url: "/og-image.png", // optional (add later)
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "ToolStack.fun",
+        alt: "ToolStack.fun – Free Online Developer Tools",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
+    site: "@toolstackfun", // optional (can remove if not used)
     title: "ToolStack.fun – Free Online Developer Tools",
     description:
-      "Free online tools for developers and students. JSON, JWT, Image, Text and more.",
+      "Free online tools for developers and students. JSON, JWT, Image utilities and more.",
+    images: ["/og-image.png"],
   },
 
-  alternates: {
-    canonical: "https://www.toolstack.fun",
+  verification: {
+    google: "ADD_GOOGLE_SEARCH_CONSOLE_CODE_HERE",
   },
 };
+
 
 export default function RootLayout({
   children,
