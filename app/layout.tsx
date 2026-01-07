@@ -4,9 +4,66 @@ import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ToolStack.fun – Free Online Developer Tools",
+  metadataBase: new URL("https://www.toolstack.fun"),
+
+  title: {
+    default: "ToolStack.fun – Free Online Developer Tools",
+    template: "%s | ToolStack.fun",
+  },
+
   description:
-    "Free online developer tools like JSON Formatter, JWT Decoder, QR Code Generator, URL Shortener, and Image Tools.",
+    "ToolStack.fun offers free online developer tools like JSON Formatter, JWT Tools, Image Tools, Text Utilities and more. Built for students and developers.",
+
+  keywords: [
+    "online tools",
+    "developer tools",
+    "json tools",
+    "jwt tools",
+    "image tools",
+    "free online tools",
+    "toolstack",
+  ],
+
+  authors: [{ name: "ToolStack Team" }],
+  creator: "ToolStack.fun",
+  publisher: "ToolStack.fun",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+
+  openGraph: {
+    type: "website",
+    siteName: "ToolStack.fun",
+    url: "https://www.toolstack.fun",
+    title: "ToolStack.fun – Free Online Developer Tools",
+    description:
+      "Free online tools for developers and students. JSON, JWT, Image, Text and more.",
+    images: [
+      {
+        url: "/og-image.png", // optional (add later)
+        width: 1200,
+        height: 630,
+        alt: "ToolStack.fun",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "ToolStack.fun – Free Online Developer Tools",
+    description:
+      "Free online tools for developers and students. JSON, JWT, Image, Text and more.",
+  },
+
+  alternates: {
+    canonical: "https://www.toolstack.fun",
+  },
 };
 
 export default function RootLayout({
