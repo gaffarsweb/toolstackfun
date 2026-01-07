@@ -82,6 +82,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        <meta name="google-adsense-account" content="ca-pub-8948084257860499"></meta>
       </head>
       <body className="min-h-screen flex flex-col">
         {/* ---------- HEADER ---------- */}
