@@ -3,34 +3,34 @@
 import { useEffect, useRef, useState } from "react";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title:
-    "Image Compressor – Reduce Image Size Online Without Quality Loss | ToolStack.fun",
-  description:
-    "Free online image compressor to reduce image file size using real quality-based compression. Compress JPG, JPEG, and PNG images securely in your browser without uploading files.",
-  keywords: [
-    "Image Compressor",
-    "Compress Image Online",
-    "Reduce Image Size",
-    "JPG Compressor",
-    "JPEG Compressor",
-    "PNG Compressor",
-    "Online Image Tools",
-    "Free Image Compressor",
-  ],
-  alternates: {
-    canonical:
-      "https://www.toolstack.fun/tools/image/image-compressor",
-  },
-  openGraph: {
-    title: "Free Online Image Compressor | ToolStack.fun",
-    description:
-      "Compress images using real quality-based compression. Fast, secure, and browser-based image compression tool.",
-    url: "https://www.toolstack.fun/tools/image/image-compressor",
-    siteName: "ToolStack.fun",
-    type: "website",
-  },
-};
+// export const metadata: Metadata = {
+//   title:
+//     "Image Compressor – Reduce Image Size Online Without Quality Loss | ToolStack.fun",
+//   description:
+//     "Free online image compressor to reduce image file size using real quality-based compression. Compress JPG, JPEG, and PNG images securely in your browser without uploading files.",
+//   keywords: [
+//     "Image Compressor",
+//     "Compress Image Online",
+//     "Reduce Image Size",
+//     "JPG Compressor",
+//     "JPEG Compressor",
+//     "PNG Compressor",
+//     "Online Image Tools",
+//     "Free Image Compressor",
+//   ],
+//   alternates: {
+//     canonical:
+//       "https://www.toolstack.fun/tools/image/image-compressor",
+//   },
+//   openGraph: {
+//     title: "Free Online Image Compressor | ToolStack.fun",
+//     description:
+//       "Compress images using real quality-based compression. Fast, secure, and browser-based image compression tool.",
+//     url: "https://www.toolstack.fun/tools/image/image-compressor",
+//     siteName: "ToolStack.fun",
+//     type: "website",
+//   },
+// };
 
 export default function ImageCompressorPage() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
