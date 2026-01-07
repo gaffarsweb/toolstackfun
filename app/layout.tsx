@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.toolstack.fun"),
@@ -73,6 +74,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* Google AdSense */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8948084257860499"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
       <body className="min-h-screen flex flex-col">
         {/* ---------- HEADER ---------- */}
         <header className="bg-black text-white sticky top-0 z-50">
