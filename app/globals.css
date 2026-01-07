@@ -92,3 +92,33 @@ html {
 .animate-fade-in {
   animation: fade-in 0.25s ease-out;
 }
+/* FLOAT */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* BLINK */
+@keyframes blink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+.animate-blink {
+  animation: blink 4s infinite;
+}
+
+/* WAVE */
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(20deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(20deg); }
+  100% { transform: rotate(0deg); }
+}
+.animate-wave {
+  animation: wave 2.5s infinite;
+  transform-origin: bottom center;
+}
